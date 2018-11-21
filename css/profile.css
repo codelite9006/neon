@@ -1,0 +1,22 @@
+@media screen and (orientation:portrait) {
+html{background:#242b31;}
+#profile_menu{width:65%;
+background-image: linear-gradient(135deg, #242b31, #000);
+overflow: hidden;
+left:-85%;
+}
+.item{border:none !important; padding:0; overflow:hidden;}
+.ts.secondary.menu{padding:5%;}
+}
+@media screen and (orientation:landscape) {
+html{background:#242b31;}
+#profile_menu{width:40%;
+background-image: linear-gradient(135deg, #242b31, #000);
+overflow: hidden;
+left:-85%;
+}
+.item{border:none !important; padding:0; overflow:hidden;}
+.ts.secondary.menu{padding:5%;}
+
+.ts.narrow.container{padding-left:10%; padding-right:10%;}
+}
