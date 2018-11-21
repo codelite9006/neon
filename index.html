@@ -1,0 +1,136 @@
+<!-- Tocas UI：CSS 與元件 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
+<!-- Tocas JS：模塊與 JavaScript 函式 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
+<link rel="stylesheet" href="css/profile.css">
+<meta name="theme-color" content="#242B31">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<div id="content" class="ts secondary menu" style="margin:0;">
+    <i class="large content icon"></i>
+</div>
+
+<div style="background-image:url('img/dog.jpg'); background-repeat:no-repeat; background-size: 100% 100%; width :100%; height:250px;"></div>
+<div style="background-image:url('img/user.jpg'); background-repeat:no-repeat; background-size: 100%; width:100px; height:100px; border-radius:50%; left:50%; margin-top: -50px; margin-left:-50px;"></div>
+<div class="ts center aligned 
+small header" style="color:#fff;" style="padding :0! important;">🐻熊熊🐻</div>
+<div class="ts center aligned mini sub header" style="color:#92979A; margin:0! important;">ID: S.derrick9006</div>
+
+<div class="ts horizontal divider">自我簡介</div>
+
+<div class="ts narrow container" style="color:#fff;">
+本人是一位邊緣程序員, 如果大家需要自訂網頁賴我自洽。
+<br>
+<br>
+目前為了增加知名度, 所以只收河豚生魚片作為付款。
+<br><br>
+大多數時間都是耗在Soocii, 有興趣一起玩的歡迎加入。
+<br><br>
+我的遊戲ID<br> 
+(非中國伺服器) 熊熊來擼管<br>
+(中國伺服器) 熊熊來魯管<br>
+傳說對決小號 加價鈎<br>
+</div>
+
+<div class="ts horizontal divider">2018年11月活動</div>
+
+<div id="activity1" class="ts narrow container" style="color:#fff;">
+1) 11月的月榜貢獻者冠軍將能獲得我存的一個月米粒。
+<br><br>
+</div>
+<div id="activity2" class="ts narrow container" style="color:#fff;">
+2) 11月特別活動(1日到30日)<br>
+1個50台幣的河豚生魚片可以得到1次幸運抽機會。被抽到的可以隨意指定傳說對決商城贈送的皮膚一個。抽獎過程現場直播以免不公平。
+<br><br>
+生魚片貢獻者名單和抽獎機會次數<a href="https://codelite9006.github.io/soocii.list/index.html
+" >請點擊查閱</a><br>
+<br>
+<div id="profile_menu" class="ts inverted left fixed vertical compact menu">
+    <div id="icon" class="item">
+        <i class="large x icon"></i>
+    </div>
+    
+    <div class="item breakrow">
+    自我簡介
+    </div>
+    <div class="item breakrow">
+        <span><i class="ts add icon"></i></span>
+        活動
+    </div>
+    <div class="item" style="padding:0px 0px 0px 50px!important; ">
+    <div class="menu" style="padding:0;">
+    <a class="item" href="#activity1">11月貢獻榜冠軍活動</a>
+    <a class="item" href="#activity2">傳說造型抽獎</a>
+    </div>
+    </div>
+    <div class="item breakrow">
+    <span><i class="ts add icon"></i></span>
+    社群
+    </div>
+    
+    <div class="item" style="padding:0px 0px 0px 50px!important; ">
+    <div class="menu" style="padding:0;">
+    <a class="item">
+    <I class="ts large facebook icon "></i><a href ="fb://page/derrick9006"> Facebook ID: derrick9006</a>
+    </a>
+    <a class="item">
+    <I class="ts large wechat icon "></i> We Chat ID: derrick_bear
+    </a>
+    <a class="item">
+    <I class="ts large mail icon "></i> Line ID: derrick.bear
+    </a>
+    </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$('div.item.breakrow').nextUntil('div.item.breakrow').slideToggle(0);
+$('.item.breakrow').click(function(){
+$(this).nextUntil('div.item.breakrow').slideToggle(200);
+var ele = $(this).children("span").children("i");
+var toggle = ele.attr('class');
+
+switch(toggle){
+case "ts add icon":
+ele.attr('class','ts minus icon');
+break;
+default:
+ele.attr('class','ts add icon');
+}
+});
+
+$('#icon').click(function(){
+$('#profile_menu').animate({
+  left: "-85%",
+  opacity: 0
+}, {
+  duration: 500,
+  queue: false
+});
+});
+
+$('#content').click(function(){
+$('#profile_menu').animate({
+  left: "-1px",
+  opacity: 1
+}, {
+  duration: 500,
+  queue: false
+});
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+});
+</script>
